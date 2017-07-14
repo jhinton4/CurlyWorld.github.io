@@ -17,6 +17,7 @@
 from google.appengine.api import users
 import jinja2
 import webapp2
+<<<<<<< HEAD
 import logging
 
 class QuizHandler(webapp2.RequestHandler):
@@ -36,33 +37,19 @@ class MainHandler(webapp2.RequestHandler):
 
 
 <h1><center> Curly World <center></h1>
+=======
+import os
+>>>>>>> deedf5855d4bfce57ebe0e276ea7c1b815541fc9
+
+jinja_environment = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('template/mainpage.html')
+        self.response.out.write(template.render())
 
-<div class="container">
-    <center><label><b>Username</b></label><center>
-    <center><input type="text" placeholder="Enter Username" name="uname" required><center>
-
-    <center><label><b>Email</b></label><center>
-    <center><input type="text" placeholder="Enter Email" name="email" required><center>
-      <center><label><b>Confirm Email</b></label><center>
-      <center><input type="text" placeholder="Confirm Email" name="email" required><center>
-
-    <center><label><b>Password</b></label><center>
-    <center><input type="password" placeholder="Enter Password" name="psw" required><center>
-      <center><label><b>Confirm Password</b></label><center>
-      <center><input type="password" placeholder="Confirm Password" name="psw" required><center>
-
-    <center><button type="submit">Login</button><center>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <center><button type="button" class="cancelbtn">Cancel</button><center>
-    </div>
-</form>
-</html>
-
-''')
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
