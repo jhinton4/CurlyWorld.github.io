@@ -19,6 +19,11 @@ import jinja2
 import webapp2
 import logging
 
+class QuizHandler(webapp2.RequestHandler):
+  def get(self):
+      self.response.write('''
+      Quiz''')
+
 class MainHandler(webapp2.RequestHandler):
   def get(self):
       self.response.write('''
@@ -60,5 +65,6 @@ class MainHandler(webapp2.RequestHandler):
 ''')
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/quiz', QuizHandler)
 ], debug=True)
