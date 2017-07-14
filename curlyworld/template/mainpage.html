@@ -9,8 +9,9 @@
 <h1><center> Curly World <center></h1>
 
 
-
+<body>
 <div class="container">
+  <form action = "accounts.php" method="get">
     <center><label><b>Username</b></label><center>
     <center><input type="text" placeholder="Enter Username" name="uname" required><center>
 
@@ -24,11 +25,12 @@
       <center><label><b>Confirm Password</b></label><center>
       <center><input type="password" placeholder="Confirm Password" name="psw" required><center>
 
-    <center><button type="submit">Login</button><center>
+    <center><input type="submit" name="Login" value="Login"><center>
+
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <center><button type="button" class="cancelbtn">Cancel</button><center>
-    </div>
+  </div>
 </form>
+</body>
 </html>
