@@ -5,32 +5,44 @@
   <title> Curly World </title>
 </head>
 
+<style>
+h1 { font-family: 'Brush Script MT', cursive;
+      font-size:  84px;
+}
+
+label { font-family: 'Brush Script MT', cursive;
+        font-size: 30px;
+
+}
+
+</style>
+
 
 <h1><center> Curly World <center></h1>
 
 
-<body>
+<body bgcolor= #40clad>
 <div class="container">
-  <form action = "accounts.php" method="get">
+  <form action = "/Login" method="post">
     <center><label><b>Username</b></label><center>
     <center><input type="text" placeholder="Enter Username" name="uname" required><center>
 
-    <center><label><b>Email</b></label><center>
+    <center><label><b>Emailxxx</b></label><center>
     <center><input type="text" placeholder="Enter Email" name="email" required><center>
       <center><label><b>Confirm Email</b></label><center>
-      <center><input type="text" placeholder="Confirm Email" name="email" required><center>
+      <center><input type="text" placeholder="Confirm Email" name="email2" required><center>
 
     <center><label><b>Password</b></label><center>
     <center><input type="password" placeholder="Enter Password" name="psw" required><center>
       <center><label><b>Confirm Password</b></label><center>
-      <center><input type="password" placeholder="Confirm Password" name="psw" required><center>
+      <center><input type="password" placeholder="Confirm Password" name="psw2" required><center>
 
     <center><input type="submit" name="Login" value="Login"><center>
-
-  </div>
+  </form>
+</div>
 
   <div class="container" style="background-color:#f1f1f1">
   </div>
-</form>
+
 </body>
 </html>
