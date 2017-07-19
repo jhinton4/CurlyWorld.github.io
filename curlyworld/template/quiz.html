@@ -13,7 +13,7 @@
   <div id="quiz"></div>
 
 
-
+<form action="results" method='post'>
   <p class="question">How does your hair appear?</p>
 
   <ul class="answers">
@@ -58,11 +58,10 @@
 <ul class="answers">
 <input type="radio" name="q6" value="a" id="q1a"><label for="q1a">Curl definition ,fighting frizz</label><br/>
 <input type="radio" name="q6" value="b" id="q1b"><label for="q1b">Maintaining moisture, avoiding tangles and shrinkage</label><br/>
-<input type="radio" name="q6                                " value="c" id="q1c"><label for="q1c">Both</label><br/>
+<input type="radio" name="q6" value="c" id="q1c"><label for="q1c">Both</label><br/>
 </ul>
 </div>
 
 <div class="quiz-result"></div>
-<button id="submit">Get your hair type!</button>
-<div id="results"></div>
-<div class="quiz">
+<input type='submit' name="results" value="Get your hair type!">
+</form>
